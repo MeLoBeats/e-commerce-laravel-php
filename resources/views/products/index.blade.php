@@ -22,10 +22,11 @@
                                     <h2 tabindex="0" class="focus:outline-none text-lg font-semibold">{{ $product->name }}</h2>
                                     <p tabindex="0" class="focus:outline-none text-xs text-gray-600 pl-5"></p>
                                 </div>
-                                <p tabindex="0" class="focus:outline-none text-xs h-10 overflow-y-hidden text-ellipsis text-gray-600 mt-2">{{ $product->description }}</p>
-                                <add-to-cart/>
+                                <p tabindex="0" style="display: -webkit-box; -webkit-box-orient: vertical; line-clamp: 2;" class="focus:outline-none text-xs h-8 overflow-hidden text-ellipsis text-gray-600 mt-2">{{ $product->description }}</p>
+                                <add-to-cart />
                             </div>
                         </div>
+                        {{-- <div class="bg-indigo-500"></div> --}}
                     </div>
                     @endforeach
                 </div>
