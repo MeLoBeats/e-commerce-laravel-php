@@ -1,13 +1,28 @@
 <template>
     <div class="flex items-center justify-between py-4">
-        <button class="bg-indigo-500 p-2 text-white">
+        <button 
+        class="bg-indigo-500 p-2 text-white"
+        @click.prevent="addToCart"
+        >
         Ajouter au panier
         </button>
     </div>
 </template>
 
 <script setup>
-    const addToCart = () => {
-        console.log("added");
+import axios from 'axios';
+
+    const addToCart = async () => {
+        await axios.get('/sanctum/csrf-cookie')
+        await axios.get('/api/user').then(async(res) => {
+            let response = await axios.post('/api/products', {
+                productId
+            })
+            console.log(response);
+        }).catch((err) => {
+            console.log(err);
+        })
+        
     }
+    const productId = defineProps(['productId']);
 </script>

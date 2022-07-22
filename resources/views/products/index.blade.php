@@ -14,7 +14,7 @@
                         <div class="bg-white max-h-56 pb-3">
                             <div class="flex items-center justify-between px-4 pt-4">
                                 <div class="bg-yellow-200 py-1.5 px-6 rounded-full">
-                                    <p tabindex="0" class="focus:outline-none text-xs text-yellow-700">{!! $product->price !!}</p>
+                                    <p tabindex="0" class="focus:outline-none text-xs text-yellow-700">{!! $product->price_format() !!}</p>
                                 </div>
                             </div>
                             <div class="p-4">
@@ -23,7 +23,7 @@
                                     <p tabindex="0" class="focus:outline-none text-xs text-gray-600 pl-5"></p>
                                 </div>
                                 <p tabindex="0" style="display: -webkit-box; -webkit-box-orient: vertical; line-clamp: 2;" class="focus:outline-none text-xs h-8 overflow-hidden text-ellipsis text-gray-600 mt-2">{{ $product->description }}</p>
-                                <add-to-cart />
+                                <add-to-cart :product-id="{{ $product->id }}" />
                             </div>
                         </div>
                         {{-- <div class="bg-indigo-500"></div> --}}
