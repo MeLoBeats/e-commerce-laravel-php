@@ -22,10 +22,8 @@
                                     <h2 tabindex="0" class="focus:outline-none text-lg font-semibold">{{ $product->name }}</h2>
                                     <p tabindex="0" class="focus:outline-none text-xs text-gray-600 pl-5"></p>
                                 </div>
-                                <p tabindex="0" class="focus:outline-none text-xs text-gray-600 mt-2">{{ $product->description }}</p>
-                                <div class="flex items-center justify-between py-4">
-                                    <button class="bg-indigo-500 text-white p-2">Ajouter au panier</button>
-                                </div>
+                                <p tabindex="0" class="focus:outline-none text-xs h-10 overflow-y-hidden text-ellipsis text-gray-600 mt-2">{{ $product->description }}</p>
+                                <add-to-cart/>
                             </div>
                         </div>
                     </div>
