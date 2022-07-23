@@ -11,14 +11,13 @@
 
 <script setup>
 import axios from 'axios';
+import useProduct from '../composable/products';
+const { add } = useProduct();
 
     const addToCart = async () => {
         await axios.get('/sanctum/csrf-cookie')
-        await axios.get('/api/user').then(async(res) => {
-            let response = await axios.post('/api/products', {
-                productId
-            })
-            console.log(response);
+        await axios.get('/api/user').then(async() => {
+            await add(productId)
         }).catch((err) => {
             console.log(err);
         })
