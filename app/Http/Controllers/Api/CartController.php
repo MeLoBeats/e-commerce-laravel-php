@@ -29,7 +29,9 @@ class CartController extends Controller
     {
         $product = Product::where('id', $request->productId)->first();
         $count = (new CartRepository())->add($product);
-        return $product;
+        return response()->json([
+            'count' => $count,
+        ]);
     }
 
     /**

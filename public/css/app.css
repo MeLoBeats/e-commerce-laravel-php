@@ -943,9 +943,6 @@ select {
 .overflow-hidden {
   overflow: hidden;
 }
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
 .text-ellipsis {
   text-overflow: ellipsis;
 }
@@ -1300,18 +1297,6 @@ select {
 }
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-.line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
